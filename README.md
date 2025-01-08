@@ -19,3 +19,16 @@ This project is a simple task manager app that allows the user to create, read, 
 ## What does this project not use?
 1. The project does not use NextAuth.js for authentication.
 2. The project does not use Next.js (w/ App Router) for routing.
+
+# Features
+
+## 1. Select and connect a wallet
+![](./assets/selectWallet.png)
+![](./assets/chooseWallet.png)
+
+
+## 2. Create a task
+![](./assets/addTask.png)
+
+## 3. Toggle a task as completed/not complete or delete a task
+![](./assets/completeOrDelete.png)
