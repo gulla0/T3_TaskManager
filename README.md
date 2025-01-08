@@ -7,7 +7,9 @@ This project is a simple task manager app that allows the user to create, read, 
 
 ## How to run this project?
 1. Clone this repository
-2. Run `npm install`
+2. create .env file and add 'DATABASE_URL="file:./db.sqlite"'
+3. Run `npx prisma db push`
+4. Run `npm install`
 3. Run `npm run dev`
 
 ## What does this project use?
