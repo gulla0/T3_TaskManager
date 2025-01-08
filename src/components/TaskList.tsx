@@ -22,19 +22,36 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onToggleTask, onDeleteTask }
         {tasks.map((task) => (
           <li
             key={task.id}
-            className={`flex items-center justify-between px-4 py-2 rounded ${
-              task.completed ? "bg-green-500 text-white" : "bg-gray-800 text-white"
+            className={`flex items-center px-6 py-4 rounded ${
+              task.completed ? "bg-green-800 text-white" : "bg-gray-800 text-white"
             }`}
+            style={{ wordBreak: "break-word" }} // Allow task name to wrap
           >
+            {/* Task Name */}
             <span
-              onClick={() => onToggleTask(task.id)}
-              className={`cursor-pointer ${task.completed ? "line-through" : ""}`}
+              className={`${
+                task.completed ? "line-through" : ""
+              } font-bold text-lg flex-1`} // Task name wraps and grows
             >
               {task.name}
             </span>
+
+            {/* Checkbox and Completed Text */}
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                checked={task.completed}
+                onChange={() => onToggleTask(task.id)}
+                className="cursor-pointer"
+              />
+              <span className="text-sm text-gray-400">Completed</span>
+            </div>
+
+            {/* Delete Button */}
             <button
               onClick={() => onDeleteTask(task.id)}
-              className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+              className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+              style={{ marginLeft: "10px" }} // Add spacing between checkbox group and button
             >
               Delete
             </button>

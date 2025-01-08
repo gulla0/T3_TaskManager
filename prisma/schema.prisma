@@ -15,4 +15,5 @@ model Task {
     name      String   // The task name
     completed Boolean  @default(false)     // Task completion status
     createdAt DateTime @default(now())     // Timestamp for when the task was created
+    walletAddress String   // Associate task with a wallet
 }

@@ -1,4 +1,4 @@
-# T3 TaskManagerApp
+# T3/Mesh TaskManagerApp
 
 This is sample project for learning T3 Stack.
 
